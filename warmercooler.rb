@@ -9,9 +9,9 @@ while guess != solution
     puts "Guess again."
     guess = gets.to_i
     guesses.push(guess)
-    if guesses[-1] - solution < guesses[-2] - solution
+    if (guesses[-1] - solution).abs < (guesses[-2] - solution).abs
         puts "Warmer."
-    elsif guesses[-1] - solution > guesses[-2] - solution
+    elsif (guesses[-1] - solution).abs > (guesses[-2] - solution).abs
         puts "Cooler."
     else
         puts "Luke warm."
