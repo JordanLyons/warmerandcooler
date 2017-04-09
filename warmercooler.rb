@@ -1,7 +1,7 @@
-solution = 1 + rand(1000)
+solution = 1 + rand(100)
 guesses = []
 # puts solution # This statement is temporary while I test the game.
-puts "Guess what number I'm thinking of. It's between 1 and 1000"
+puts "Guess what number I'm thinking of. It's between 1 and 100."
 guess = gets.to_i
 guesses.push(guess)
 print "Wrong!" if guess != solution
