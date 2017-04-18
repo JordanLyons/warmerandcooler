@@ -3,7 +3,7 @@ guesses = []
 puts "Guess what number I'm thinking of. It's between 1 and 100."
 guess = gets.to_i
 guesses.push(guess)
-print "Wrong!" if guess != solution
+print guess != solution ? "Wrong!" : "Good guess!"
 while guess != solution
     puts " Guess again."
     guess = gets.to_i
