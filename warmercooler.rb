@@ -2,13 +2,11 @@ solution_range = 100
 solution = 1 + rand(solution_range)
 guesses = []
 puts "Guess what number I'm thinking of. It's between 1 and #{solution_range}"
-guess = gets.to_i
-guesses.push(guess)
-print guess != solution ? "Wrong!" : "Good guess!"
-while guess != solution
+guesses << gets.to_i
+print guesses[0] != solution ? "Wrong!" : "Good guess!"
+while guesses[-1] != solution
     puts " Guess again."
-    guess = gets.to_i
-    guesses.push(guess)
+    guesses << gets.to_i
     if (guesses[-1] - solution).abs < (guesses[-2] - solution).abs
         print "Warmer."
     elsif (guesses[-1] - solution).abs > (guesses[-2] - solution).abs
